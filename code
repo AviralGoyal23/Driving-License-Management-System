@@ -1,0 +1,219 @@
+create database dlm_db;
+use dlm_db;
+create table afl(
+adhaar int,
+fname varchar(10) NOT NULL,
+lname varchar(10) NOT NULL,
+Primary Key (adhaar)
+);
+
+insert into afl values('aviral','goyal',13454);
+insert into afl values('sahil','rai',35345);
+insert into afl values('srimon','ghosh',53453);
+insert into afl values('amaan','syed',12423);
+insert into afl values('sidhant','sachdeva',12344);
+insert into afl values('siddharth','garg',21344);
+insert into afl values('saarthak','saxena',12454);
+insert into afl values('harsh','pandey',12342);
+insert into afl values('hetal','sharma',23414);
+insert into afl values('hardik','vats',12347);
+insert into afl values('achyut','tiwari',34153);
+insert into afl values('harshit','gogia',54134);
+
+select * from afl;
+
+create table avn(
+adhaar int,
+vehicle_number varchar(10),
+Primary Key (adhaar)
+);
+
+insert into avn values(13454,'UP-5087');
+insert into avn values(35345,'UP-5034');
+insert into avn values(53453,'DL-5555');
+insert into avn values(12423,'PB-4321');
+insert into avn values(12344,'WB-6789');
+insert into avn values(21344,'MH-8435');
+insert into avn values(12454,'DL-0001');
+insert into avn values(12342,'RJ-6452');
+insert into avn values(23414,'UP-4320');
+insert into avn values(12340,'PB-0008');
+insert into avn values(34153,'HR-2654');
+insert into avn values(54134,'JK-8231');
+
+
+create table vnfl(
+vehicle_number varchar(10),
+fname varchar(10) NOT NULL,
+lname varchar(10) NOT NULL,
+Primary Key (vehicle_number)
+);
+
+insert into vnfl values('aviral','goyal','UP-5087');
+insert into vnfl values('sahil','rai','UP-5034');
+insert into vnfl values('srimon','ghosh','DL-5555');
+insert into vnfl values('amaan','syed','PB-4321');
+insert into vnfl values('sidhant','sachdeva','WB-6789');
+insert into vnfl values('sidharth','garg','MH-8435');
+insert into vnfl values('saarthak','saxena','DL-0001');
+insert into vnfl values('harsh','pandey','RJ-6452');
+insert into vnfl values('hetal','sharma','UP-4320');
+insert into vnfl values('hardik','sharma','PB-0008');
+insert into vnfl values('achyut','tiwari','HR-2654');
+insert into vnfl values('harshit','gogia','JK-8231');
+
+create table bnbph(
+branch_name varchar(10) NOT NULL,
+branch_phone int NOT NULL,
+Primary Key (branch_name)
+);
+
+insert into bnbph values('hazratganj',542654);
+insert into bnbph values('gautambudh',456264);
+insert into bnbph values('mehrauli',564564);
+insert into bnbph values('jalawallah',768678);
+insert into bnbph values('jadhavpur',234534);
+insert into bnbph values('santa cruz',352365);
+insert into bnbph values('rajouri',755675);
+insert into bnbph values('amer',245663);
+insert into bnbph values('mehtab',234546);
+insert into bnbph values('bhadson',796966);
+insert into bnbph values('cyber city',567457);
+insert into bnbph values('lake',968848);
+
+create table bnbpi(
+branch_name varchar(10) NOT NULL,
+branch_pincode int NOT NULL,
+Primary Key (branch_name)
+);
+
+insert into bnbpi values('hazratganj',1111111);
+insert into bnbpi values('gautambudh',2222222);
+insert into bnbpi values('mehrauli',3333333);
+insert into bnbpi values('jalawallah',4444444);
+insert into bnbpi values('jadhavpur',5555555);
+insert into bnbpi values('santa cruz',6666666);
+insert into bnbpi values('rajouri',7777777);
+insert into bnbpi values('amer',8888888);
+insert into bnbpi values('mehtab',9999999);
+insert into bnbpi values('bhadson',9876543);
+insert into bnbpi values('cyber city',1234567);
+insert into bnbpi values('lake',3456789);
+
+create table bxibc(
+branch_city varchar(10)NOT NULL,
+branch_pincode int NOT NULL,
+Primary Key (branch_pincode)
+);
+insert into bxibc values('lucknow',1111111);
+insert into bxibc values('noida',2222222);
+insert into bxibc values('delhi',3333333);
+insert into bxibc values('amritsar',4444444);
+insert into bxibc values('kolkata',5555555);
+insert into bxibc values('mumbai',6666666);
+insert into bxibc values('delhi',7777777);
+insert into bxibc values('jaipur',8888888);
+insert into bxibc values('agra',9999999);
+insert into bxibc values('patiala',9876543);
+insert into bxibc values('gurugram',1234567);
+insert into bxibc values('leh',3456789);
+
+create table vnvt(
+vehicle_number varchar(10),
+vehicle_type varchar(10),
+PRIMARY KEY (vehicle_number)
+);
+insert into vnvt values('UP-5087','HMV');
+insert into vnvt values('UP-5037','HMV');
+insert into vnvt values('UP-5555','LMV');
+insert into vnvt values('DL-4321','LMV-NT');
+insert into vnvt values('PB-6789','HMV');
+insert into vnvt values('WB-8435','HMV');
+insert into vnvt values('MH-0001','LMV');
+insert into vnvt values('DL-6452','HMV');
+insert into vnvt values('RJ-4320','LMV-NT');
+insert into vnvt values('UP-0008','HMV');
+insert into vnvt values('PB-2654','LMV');
+insert into vnvt values('JK-8231','HMV');
+
+create table lxlclebn(
+licence_expiry date,
+licence_class varchar(10),
+licence_num int,
+branch_name varchar(20) NOT NULL,
+Primary Key (licence_num)
+);
+
+insert into lxlclebn values('2012-10-25','ll','67897','hazratganj');
+insert into lxlclebn values('2011-05-01','dl','89678','sector-45');
+insert into lxlclebn values('2015-07-09','dl','89679','mehrauli');
+insert into lxlclebn values('1996-02-06','ll','82278','jhalliawallah');
+insert into lxlclebn values('2004-01-07','dl','87969','jadhavpur');
+insert into lxlclebn values('2022-01-03','dl','96787','santa cruz');
+insert into lxlclebn values('2014-11-10','dl','76987','rajouri');
+insert into lxlclebn values('2026-09-11','dl','79678','amer');
+insert into lxlclebn values('2030-12-12','ll','80678','mehtab bagh');
+insert into lxlclebn values('2021-09-10','ll','67807','bhadson road');
+insert into lxlclebn values('2014-05-05','dl','67896','cyber city');
+insert into lxlclebn values('2014-12-08','dl','18302','lake');
+
+create table lna(
+licence_num int,
+adhaar int,
+Primary Key (licence_num)
+);
+
+insert into lna values(67897,13454);
+insert into lna values(89678,35345);
+insert into lna values(89679,53453);
+insert into lna values(89078,12423);
+insert into lna values(80978,12344);
+insert into lna values(87969,21344);
+insert into lna values(96787,12454);
+insert into lna values(76987,12342);
+insert into lna values(79678,23414);
+insert into lna values(89678,12347);
+insert into lna values(67890,34153);
+insert into lna values(67806,54134);
+
+create table cnctcdvn(
+challan_number int,
+challan_type varchar(10),
+challan_date date,
+vehicle_number varchar(10),
+Primary Key (challan_number)
+);
+
+insert into cnctcdvn values(45634,'licence','2015-05-02',’UP-5037’);
+insert into cnctcdvn values(56345,'helmet','2015-05-02',’RJ-4320’);
+insert into cnctcdvn values(56453,'seatbelt','2019-09-04',’DL-4321’);
+insert into cnctcdvn values(73674,'poc','2013-01-25',’RJ-4320’);
+insert into cnctcdvn values(54645,'insurance','2019-09-14',’UP-5037’);
+insert into cnctcdvn values(73474,'licence','2019-12-08',’DL-4321’);
+insert into cnctcdvn values(47367,'helmet','2010-03-12',’WB-8435’);
+insert into cnctcdvn values(24564,'seatbelt','2020-04-11',’PB-2654’);
+insert into cnctcdvn values(26546,'poc','2022-02-20',’DL-6452’);
+insert into cnctcdvn values(54624,'insurance','2013-02-03',’UP-0008’);
+insert into cnctcdvn values(62456,'parking','2019-10-17',’PB-6789’);
+insert into cnctcdvn values(41334,'licence','2017-05-22',’JK-8231’);
+insert into cnctcdvn values(48734,'red light','2005-08-24',’UP-5087’);
+
+create table ctf(
+challan_type varchar(10),
+fine int,
+Primary Key (challan_type)
+);
+
+insert into ctf values('licence',100);
+insert into ctf values('helmet',1000);
+insert into ctf values('seatbelt',500);
+insert into ctf values('poc',2000);
+insert into ctf values('insurance',2000);
+insert into ctf values('licence',500);
+insert into ctf values('helmet',6000);
+insert into ctf values('seatbelt',2000);
+insert into ctf values('poc',750);
+insert into ctf values('insurance',500);
+insert into ctf values('parking',1000);
+insert into ctf values('licence',3000);
+insert into ctf values('red light',2500);
